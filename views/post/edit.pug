@@ -1,0 +1,18 @@
+extends ../layout
+
+block content 
+    form(action="/posts", method="post") 
+        table
+            tbody
+                tr
+                    th 제목
+                    td: input(type="text", name="title")
+                tr
+                    th 내용
+                    td: textarea(type="text", name="content")
+                tr
+                    th 저자
+                    td: input(type="text", name="author")
+                tr
+                   button(type="submit") 게시글 올리기
+                
