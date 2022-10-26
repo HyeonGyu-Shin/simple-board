@@ -1,18 +1,18 @@
 extends ../layout
 
 block content 
-    form(action="/posts", method="post") 
+    h1= post? '글 수정하기': '새 글 등록하기'
+    form(action= post ? "/posts/"+post.shortId :"/posts", method="post") 
         table
             tbody
                 tr
                     th 제목
-                    td: input(type="text", name="title")
+                    td: input(type="text", name="title" value= post && post.title)
                 tr
                     th 내용
-                    td: textarea(type="text", name="content")
+                    td: textarea(type="text", name="content") #{post && post.content}
                 tr
                     th 저자
-                    td: input(type="text", name="author")
-                tr
-                   button(type="submit") 게시글 올리기
+                    td: input(type="text", name="author" value= post && post.author)
+        button(type="submit") #{post? '수정하기' : '등록하기'}
                 

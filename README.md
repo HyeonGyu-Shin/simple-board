@@ -67,7 +67,17 @@
 
 <br>
 
-## &nbsp; 2.게시글 수정 흐름
+## &nbsp; 2.게시글 목록 및 상세 흐름
+
+<br>
+
+👉 &nbsp; 게시글 목록 및 상세 흐름은 다음과 같다.
+
+1. `/posts`로 목록 페이지 접근
+
+2. `<a href='/posts/:shortId'>` 이용하여 상세 URL Link
+
+3. `router.get('/:shortId') path parameter` 이용하여 요청 처리
 
 <br>
 

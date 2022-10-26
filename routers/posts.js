@@ -3,12 +3,30 @@ const { Post } = require('../models');
 
 const router = Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
     if (req.query.write) {
         res.render('./post/edit');
         return;
     }
-    res.send('posts complete');
+
+    const posts = await Post.find({});
+
+    res.render('./post/list', { posts });
+});
+
+router.get('/:shortId', async (req, res) => {
+    try {
+        const shortId = req.params.shortId;
+        if (shortId === '') {
+            throw new Error('shortId를 입력해주세요!');
+        }
+
+        const post = await Post.findOne({ shortId });
+
+        res.render('./post/edit', { post });
+    } catch (err) {
+        next(err);
+    }
 });
 
 router.post('/', async (req, res, next) => {

@@ -1,0 +1,14 @@
+body {
+    padding: 10px;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00b7ff;
+}
+
+tr {
+    display: block;
+    border: 1px solid #00b7ff;
+    margin: 10px 0;
+}

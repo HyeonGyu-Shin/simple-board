@@ -3,6 +3,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const dayjs = require('dayjs');
 
 const indexRouter = require('./routers/index');
 
@@ -24,8 +25,14 @@ mongoose.connection.on('disconnected', () => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(express.static('public'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.locals.formatDate = (date) => {
+    return dayjs(date).format('YYYY-MM-DD HH:mm:ss');
+};
 
 app.use('/', indexRouter);
 
