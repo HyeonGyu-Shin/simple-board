@@ -13,6 +13,6 @@ block content
                     td: textarea(type="text", name="content") #{post && post.content}
                 tr
                     th 저자
-                    td: input(type="text", name="author" value= post && post.author)
+                    td: input(type="text", name="author" value= post && post.author disabled= post? true: false)
         button(type="submit") #{post? '수정하기' : '등록하기'}
                 

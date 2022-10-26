@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1= post.title
+  table
+    tbody
+      tr
+        th= post.author
+        th(colspan="2")= formatDate(post.createdAt)
+      tr
+        td(colspan="3")
+          pre= post.content
+      tr
+        td: a(href="/posts")  목록
+        td: a(href="?edit=true")  수정
+        td: a(href="/post/delete")  삭제
