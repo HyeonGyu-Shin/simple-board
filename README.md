@@ -67,6 +67,10 @@
 
 <br>
 
+&nbsp; [게시글 작성 구현하기](https://velog.io/@rkrkdldkd/Express%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Simple-board-%EB%A7%8C%EB%93%A4%EA%B8%B0-1-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
+<br>
+
 ## &nbsp; 2.게시글 목록 및 상세 흐름
 
 <br>
@@ -80,6 +84,8 @@
 3. `router.get('/:shortId') path parameter` 이용하여 요청 처리
 
 <br>
+
+&nbsp; [게시글 조회 구현하기](https://velog.io/@rkrkdldkd/Express%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Simple-board-%EB%A7%8C%EB%93%A4%EA%B8%B0-2-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%A1%B0%ED%9A%8C-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
 <br>
 
