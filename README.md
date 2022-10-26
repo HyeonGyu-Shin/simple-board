@@ -71,11 +71,11 @@
 
 <br>
 
-## &nbsp; 2.게시글 목록 및 상세 흐름
+## &nbsp; 2. 게시글 조회 흐름
 
 <br>
 
-👉 &nbsp; 게시글 목록 및 상세 흐름은 다음과 같다.
+👉 &nbsp; 게시글 조회 흐름은 다음과 같다.
 
 1. `/posts`로 목록 페이지 접근
 
@@ -86,6 +86,22 @@
 <br>
 
 &nbsp; [게시글 조회 구현하기](https://velog.io/@rkrkdldkd/Express%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Simple-board-%EB%A7%8C%EB%93%A4%EA%B8%B0-2-%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%A1%B0%ED%9A%8C-%EA%B8%B0%EB%8A%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
+<br>
+
+## &nbsp; 3. 게시글 수정 흐름
+
+<br>
+
+👉 &nbsp; 게시글 수정 흐름은 다음과 같다.
+
+1.  `/posts/{shortId}?edit=true`로 수정 페이지 접근
+
+2.  작성 페이지를 수정 페이지로도 동작하도록 설정
+
+3.  `<form action='/posts/:shortId' method='post'>`로 post 요청 전송
+
+        html form은 PUT method를 지원하지 않기 때문에 post를 사용한다.
 
 <br>
 
